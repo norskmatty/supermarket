@@ -5,12 +5,30 @@
 	<title>My Shopping Trip</title>
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/style.css">
-	<link href='https://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Lora:400,700|Roboto:400,500' rel='stylesheet' type='text/css'>
 </head>
 <body>
 	<div class="supermarketsweep"> <img src="images/supermarketsweep.png"> </div>
 	<div class="title"> 
 		<span> Today's Shopping List </span>
+	</div>
+	<div class="main">
+		<div class="itementer">
+			<form>
+				<br id="entertext"> Enter Item </br>
+				<input type="text" name="newitem" size="30"> </input> <br> <br>
+				<input type="submit" name="submititem" value="Add Item"> </input>
+			</form>
+		</div>
+		<div class="itemlist">
+			<div class="itemstitle"> My Items </div>
+			<ul class="items">
+				<li> <span> Apples </span> <img src="images/cart.png" height=30px> In Cart </li>
+				<li> <span> Milk </span> </li>
+				<li> <span> Bread </span> <img src="images/cart.png" height=30px> In Cart </li>
+				<li> <span> Coffee </span> </li>
+			</ul>
+		</div>
 	</div>
 	<script src="https://code.jquery.com/jquery.min.js"></script>
 	<script src="js/js.js"></script>

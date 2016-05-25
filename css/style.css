@@ -30,3 +30,63 @@ body {
 	text-align: center;
 }
 
+.main {
+	display: flex;
+	height: 1000px;
+}
+
+.itementer {
+	order: 1;
+	width: 50%;
+	font-size: 26px;
+	font-family: "Roboto";
+	padding: 20px;
+}
+
+.itemlist {
+	order: 2;
+	width: 50%;
+}
+
+input[type="text"] {
+	background-color: transparent;
+	box-shadow: none;
+	border: 0;
+	border-bottom: solid 2px black;
+	text-align: center;
+}
+
+.itemstitle {
+	font-family: "Roboto";
+	font-size: 20px;
+	float: left;
+	padding: 20px;
+}
+
+.items {
+	font-size: 18px;
+	font-family: "Roboto";
+	list-style-type: none;
+	clear: left;
+	margin-left: 10px;
+}
+
+.items li span{
+	font-size: 26px;
+}
+.items li {
+	padding: 10px;
+}
+
+.items li > img {
+	padding-left: 30px;
+	padding-right: 15px;
+}
+
+.items li:first-child span {
+	text-decoration-line: line-through;
+}
+
+.items li:nth-child(3) span {
+	text-decoration-line: line-through;
+}
