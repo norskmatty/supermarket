@@ -83,10 +83,7 @@ input[type="text"] {
 	padding-right: 15px;
 }
 
-.items li:first-child span {
+.checked {
 	text-decoration-line: line-through;
-}
-
-.items li:nth-child(3) span {
-	text-decoration-line: line-through;
+	color: gray;
 }
