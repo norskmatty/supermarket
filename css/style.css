@@ -3,6 +3,83 @@ body {
 	background-size: cover;
 	background-repeat: no-repeat;
 	min-width: 800px;
+	min-height: 1000px;
+}
+
+.supermarketsweep #helpbox {
+	font-size: 60px;
+	color: white;
+	font-family: Roboto, serif;
+	position: absolute;
+	left: 25px;
+	top: 25px;
+}
+
+.supermarketsweep #helpbox:hover {
+	cursor: pointer;
+	color: black;
+}
+
+#help {
+	position: absolute;
+	width: 98%;
+	height: 98%;
+	top: 10px;
+	left: 10px;
+	background-color: #FF3400;
+	z-index: 1000;
+	font-family: Roboto, serif;
+	color: white;
+	min-width: 630px;
+	display: none;
+}
+
+#help h2 {
+	margin: 50px auto;
+	width: 630px;
+	text-align: center;
+	font-size: 32px;
+
+}
+
+#help p {
+	margin: 10px auto;
+	width: 630px;
+	font-size: 24px;
+	padding: 5px;
+}
+
+#help p span {
+	text-decoration: underline;
+}
+
+#help #goback {
+	font-size: 20px;
+	font-family: Lora;
+	color: white;
+	background-color: #040468;
+	box-shadow: 0 4px #FFAA44;
+	border-radius: 3px;
+	border: none;
+	height: 35px;
+	width: 125px;
+	text-align: center;
+	line-height: 35px;
+	margin: 30px auto;
+
+}
+
+#help #goback:hover {
+	background-color: #6565AC;
+	color: black;
+	cursor: pointer;
+}
+
+#help #goback:active {
+	background-color: #6565AC;
+	color: black;
+	cursor: pointer;
+	box-shadow: 0 2px orange;
 }
 
 .supermarketsweep {
@@ -87,6 +164,7 @@ body {
 	box-shadow: 0 2px #040468;
 	background-color: #FFAA44;
 	color: black;
+	cursor: pointer;
 	transform: translateY(2px);
 }
 
@@ -102,7 +180,6 @@ body {
 
 .main {
 	display: flex;
-	height: 1000px;
 }
 
 .itementer {
@@ -165,7 +242,7 @@ input[type="submit"] {
 
 .checked {
 	text-decoration-line: line-through;
-	color: gray;
+	color: grey;
 }
 
 .cancel:hover, .cart:hover {

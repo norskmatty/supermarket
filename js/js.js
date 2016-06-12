@@ -21,7 +21,15 @@ $(document).ready(function() {
 
 	$('ul').on('click', '.cancel', function() {
 		$(this).parent().remove();
-	})
+	});
+
+	$('#helpbox').on('click', function() {
+		$('#help').show(700);
+	});
+
+	$('#goback').on('click', function() {
+		$('#help').hide(700);
+	});
 
 	$('#startstop').on('click', function() {
 		if (timerRunning == 'stopped' || timerRunning == '') {
@@ -49,11 +57,11 @@ $(document).ready(function() {
 
 function startTimer() {
 	totalSeconds++;
-	secondsLabel.innerHTML = pad(totalSeconds%60);
-	minutesLabel.innerHTML = pad(parseInt(totalSeconds/60));
+	secondsLabel.innerHTML = calc(totalSeconds%60);
+	minutesLabel.innerHTML = calc(parseInt(totalSeconds/60));
 }
 
-function pad(val) {
+function calc(val) {
 	var valString = val + "";
 	if(valString.length < 2) {
 		return "0" + valString;
