@@ -8,7 +8,15 @@
 	<link href='https://fonts.googleapis.com/css?family=Lora:400,700|Roboto:400,500' rel='stylesheet' type='text/css'>
 </head>
 <body>
-	<div class="supermarketsweep"> <img src="images/supermarketsweep.png"> </div>
+	<div class="supermarketsweep"> 
+		<img src="images/supermarketsweep.png"> 
+		<div id="timerbox">
+			<div id="time"> <span id="minutes">00</span>:<span id="seconds">00</span>
+			</div> 
+			<div id="startstop"> <span> Start Timer </span> </div>
+		</div>
+	</div>
+
 	<div class="title"> 
 		<span> Today's Shopping List </span>
 	</div>
@@ -16,7 +24,7 @@
 		<div class="itementer">
 			<form>
 				<br id="entertext"> Enter Item </br>
-				<input type="text" id="text_value" name="newitem" size="30"> </input> <br> <br>
+				<input type="text" id="text_value" name="newitem" size="30" required autofocus> </input> <br> <br>
 				<input type="submit" id="submititem" name="submititem" value="Add Item"> </input>
 			</form>
 		</div>
