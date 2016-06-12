@@ -7,12 +7,12 @@ body {
 
 .supermarketsweep {
 	background-color: #040468;
-	height: 100px;
+	height: 125px;
 	background-repeat: no-repeat;
 }
 
 .supermarketsweep img {
-	height: 100px;
+	height: 125px;
 	width: 200px;
 	margin-left: 100px;
 	float: left;
@@ -20,10 +20,11 @@ body {
 
 .supermarketsweep #timerbox {
 	float: right;
-	height: 100px;
+	height: 125px;
 	width: 350px;
 	margin-right: 100px;
 	background-color: #040468;
+
 }
 
 #timerbox #time {
@@ -45,35 +46,47 @@ body {
 	padding: 5px;
 }
 
-#timerbox #startstop {
-	font-size: 16px;
+#timerbox #startstop, #timerbox #resettimer {
+	font-size: 20px;
 	font-family: Lora;
+	color: white;
 	background-color: #FF3400;
 	box-shadow: 0 4px #6565AC;
 	border-radius: 3px;
 	border: none;
-	height: 28px;
-	width: 110px;
-	margin-left: 120px;
-	margin-top: -3px;
+	height: 35px;
+	width: 125px;
 	text-align: center;
-	line-height: 25px;
+	line-height: 35px;
+	display: inline-block;
 }
 
-#startstop span {
+#timerbox #startstop {
+	float: left;
+	margin-left: 40px;
+}
+
+#timerbox #resettimer {
+	float: right;
+	margin-right: 40px;
+}
+
+#startstop span, #resettimer span {
 	display: inline-block;
   	vertical-align: middle;
   	line-height: normal;
 }
 
-#timerbox #startstop:hover {
+#timerbox #startstop:hover, #timerbox #resettimer:hover, input[type="submit"]:hover {
 	background-color: #FFAA44;
+	color: black;
 	cursor: pointer;
 }
 
-#timerbox #startstop:active {
+#timerbox #startstop:active, #timerbox #resettimer:active, input[type="submit"]:active {
 	box-shadow: 0 2px #040468;
 	background-color: #FFAA44;
+	color: black;
 	transform: translateY(2px);
 }
 
@@ -81,6 +94,7 @@ body {
 	display: block;
 	height: 65px;
 	background-color: #6565AC;
+	color: white;
 	font-family: "Lora";
 	font-size: 48px;
 	text-align: center;
@@ -110,6 +124,16 @@ input[type="text"] {
 	border: 0;
 	border-bottom: solid 2px black;
 	text-align: center;
+}
+
+input[type="submit"] {
+	font-size: 28px;
+	font-family: Lora;
+	color: white;
+	background-color: #FF3400;
+	box-shadow: 0 5px #6565AC;
+	border-radius: 3px;
+	border: none;
 }
 
 .itemstitle {

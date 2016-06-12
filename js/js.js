@@ -1,5 +1,8 @@
-var startTime = 0;
+var totalSeconds = 0;
 var timerRunning = '';
+var minutesLabel = document.getElementById("minutes");
+var secondsLabel = document.getElementById("seconds");
+var timer = '';
 
 $(document).ready(function() {
 
@@ -23,42 +26,39 @@ $(document).ready(function() {
 	$('#startstop').on('click', function() {
 		if (timerRunning == 'stopped' || timerRunning == '') {
 			timerRunning = 'started';
-			startTime = Math.floor(Date.now() / 1000);
-			startTimer();
-			$('#startstop').text('Stop Timer');
+			$('#startstop').text('Pause');
+			timer = setInterval(startTimer, 1000);
 		}
 		else if (timerRunning == 'started') {
 			timerRunning = 'stopped';
-			$('#startstop').text('Start Timer');
+			$('#startstop').text('Resume');
+			clearInterval(timer);
 		}
+	})
+
+	$('#resettimer').on('click', function() {
+		timerRunning = 'stopped';
+		totalSeconds = 0;
+		secondsLabel.innerHTML = '00';
+		minutesLabel.innerHTML = '00';
+		clearInterval(timer);
+		$('#startstop').text('Start');
 	})
 	
 })
 
 function startTimer() {
-	if (timerRunning == 'stopped') {
-		return;
-	}
-
-	var now = Math.floor(Date.now() / 1000);
-	var diff = now - startTime;
-	console.log(diff);
-	var m = Math.floor(diff / 60);
-	var s = Math.floor(diff & 60);
-	m = checkTime(m);
-	s = checkTime(s);
-	$('#minutes').text(m);
-	$('#seconds').text(s);
-	var t = setTimeout(startTimer, 500);
-
+	totalSeconds++;
+	secondsLabel.innerHTML = pad(totalSeconds%60);
+	minutesLabel.innerHTML = pad(parseInt(totalSeconds/60));
 }
 
-function checkTime(time) {
-	if (time < 10) {
-		time = "0" + time;
+function pad(val) {
+	var valString = val + "";
+	if(valString.length < 2) {
+		return "0" + valString;
 	}
-	else if (time == 60) {
-		time = "00";
+	else {
+		return valString;
 	}
-	return time;
 }
